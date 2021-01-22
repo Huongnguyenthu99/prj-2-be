@@ -1,0 +1,14 @@
+﻿@model List<CaniFashion.Models.Product>
+
+@{
+    ViewData["Title"] = "ListProducts";
+}
+
+<h2>ListProduct</h2>
+
+@foreach (var prod in Model)
+{
+    <h3>Product Name: @prod.ProductName</h3>
+    <div>Price: @prod.Price</div>
+}
+

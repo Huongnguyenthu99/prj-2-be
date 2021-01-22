@@ -1,0 +1,20 @@
+﻿@model List<CaniFashion.Models.Product>
+@{
+    ViewData["Title"] = "Get";
+}
+
+<link href="~/Theme/product.css" rel="stylesheet" type="text/css" />
+
+<h2>ListProduct</h2>
+
+@foreach (var prod in Model)
+{
+    <li>
+        <a href='@Url.Action("Get", "Product", new { id = prod.Id })'>
+            <img src="#" />
+        </a>
+        <div>@prod.ProductName</div>
+        <div>@prod.Price</div>
+    </li>
+}
+
